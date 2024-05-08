@@ -18,6 +18,8 @@ public class OperateWeapon {
         weapons[7]=new Weapon("尚方宝剑",900,900,2000,1000);
         weapons[8]=new Weapon("倚天剑",1000,700,2100,1100);
         weapons[9]=new Weapon("屠龙宝刀",3000,0,3000,0);
+        Weapon.weaponMaxIndex=weapons.length;
+        Weapon.weaponMinimumIndex=0;
 
     }
 

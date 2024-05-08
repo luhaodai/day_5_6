@@ -8,19 +8,19 @@ public class OperateWildMonster {
     public void init() {
         int index_wildMonsters = 0;
         for (int j = 0; j < 20; j++) {
-            wildMonsters[index_wildMonsters++] = new WildMonster("野猪"+j, 200, 200, 50, 1000);
+            wildMonsters[index_wildMonsters++] = new WildMonster("野猪"+j, 200, 200, 1000, 500);
         }
         for (int j = 0; j < 20; j++) {
-            wildMonsters[index_wildMonsters++] = new WildMonster("莲花怪"+j, 300, 300, 100, 1500);
+            wildMonsters[index_wildMonsters++] = new WildMonster("莲花怪"+j, 300, 300, 500, 600);
         }
         for (int j = 0; j < 20; j++) {
-            wildMonsters[index_wildMonsters++] = new WildMonster("火妖"+j, 500, 300, 800, 1600);
+            wildMonsters[index_wildMonsters++] = new WildMonster("火妖"+j, 500, 300, 3000, 700);
         }
         for (int j = 0; j < 20; j++) {
-            wildMonsters[index_wildMonsters++] = new WildMonster("水妖"+j, 900, 900, 100, 1700);
+            wildMonsters[index_wildMonsters++] = new WildMonster("水妖"+j, 900, 900, 4000, 800);
         }
         for (int j = 0; j < 20; j++) {
-            wildMonsters[index_wildMonsters++] = new WildMonster("山妖"+j, 900, 900, 100, 2000);
+            wildMonsters[index_wildMonsters++] = new WildMonster("山妖"+j, 900, 900, 5000, 900);
         }
 
     }

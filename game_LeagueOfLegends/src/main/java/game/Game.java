@@ -54,6 +54,7 @@ public WildMonster[] wildMonsters;
 //        回复双方血量
         RestoreBlood(bloodCopyPlayer,bloodCCopyAI,AI,player);
 //        挑选装备
+        choiceWeapons(player,AI);
 //        双方最后一战
 
         
@@ -65,6 +66,28 @@ public WildMonster[] wildMonsters;
         System.out.println();
         System.out.println("************************************");
         System.out.println("祝您身心愉悦，期待您下一次游戏！");
+    }
+
+    private void choiceWeapons(Hero player, Hero ai) {
+        int i=1,choice;
+        do {
+            for (Weapon weapon : weapons) {
+                System.out.println(i++ + "\t" + weapon);
+
+            }
+            System.out.print("请选择您想要购买的装备:");
+            Scanner scanner = new Scanner(System.in);
+            choice = scanner.nextInt();
+            if(choice<Weapon.weaponMaxIndex&&choice>=Weapon.weaponMinimumIndex)
+            player.weapons[player.weaponsIndex++] = weapons[choice-1];
+            System.out.printf("%s第%d个装备为%s\n",player.name,player.weaponsIndex,player.weapons[player.weaponsIndex-1].name);
+        }while(choice==-1);
+
+
+
+
+
+
     }
 
     private void RestoreBlood(double bloodCopyPlayer, double bloodCCopyAI, Hero ai, Hero player) {
@@ -166,6 +189,7 @@ public WildMonster[] wildMonsters;
 //                Thread.sleep(5000);
 //                玩家有钱购买血瓶，且还存在血瓶
                 while (true) {
+                    productsindex=0;
                     for (Product product : products) {
                         productsindex++;
 

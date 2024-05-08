@@ -1,6 +1,8 @@
 package pojo;
 
 public class Hero extends Things{
+//    英雄将要装备武器的数组下标
+    public int weaponsIndex=0;
     public boolean is_alive=true;
     public boolean is_used=false;
 //    姓名
